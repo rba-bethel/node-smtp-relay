@@ -1,10 +1,10 @@
 # SMTP Test Relay
 
-Lightweight SMTP relay that accepts incoming SMTP on port 6969 and forwards messages using a configured SMTP transport.
+Lightweight SMTP relay that accepts incoming SMTP on port 25252 and forwards messages using a configured SMTP transport.
 
 **Files:**
-- `relay.js`: SMTP server + relay implementation (listens on port 6969).
-- `main.js`: small test sender that connects to localhost:6969 and sends a sample message.
+- `relay.js`: SMTP server + relay implementation (listens on port 25252).
+- `main.js`: small test sender that connects to localhost:25252 and sends a sample message.
 - `package.json`: project metadata and `start` script (`npm run start` runs `relay.js`).
 
 **Requirements:**
@@ -35,7 +35,7 @@ npm run test
 node main.js
 ```
 
-`main.js` is configured to connect to `localhost` on port `6969` (the relay) so you can run the relay locally and then run `main.js` to exercise forwarding.
+`main.js` is configured to connect to `localhost` on port `25252` (the relay) so you can run the relay locally and then run `main.js` to exercise forwarding.
 
 **Notes:**
 - Logs from the relay include parsed From/To/Subject and summary of relay result.
